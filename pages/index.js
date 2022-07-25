@@ -17,7 +17,7 @@ export default function Home({exploreData, cardsData}) {
       </Head>
     <Header/>
     <Banner/>
-    <main className='max-w-7xl mx-auto px-8 sm:px-16'>
+    <main className='max-w-7xl bg-white mx-auto px-8 sm:px-16 shadow-md my-8 rounded-lg'>
     <section>
         <h2 className='text-3xl font-semibold py-8'> 
           Explore The World
