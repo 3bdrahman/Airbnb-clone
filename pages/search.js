@@ -3,8 +3,9 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { parseISO, format } from 'date-fns';
+import Stay from '../components/Stay';
 
-function search({searchRes}) {
+function search({searchResult}) {
     const router=useRouter();
     const {location, startDate, endDate, numGuests}=router.query;
    
@@ -35,6 +36,24 @@ function search({searchRes}) {
                         <p className='search-Button'>Advanced Filters</p>
                     
                     </div>
+                    <div className='flex flex-col'>
+                      {searchResult?.map(({img, location, title, description, star, price, total, long, lat})=>{
+                        console.log("triggered")
+                        return(
+                      <Stay 
+                      key={img}
+                        img={img}
+                        title={title}
+                        location={location}
+                        description={description}
+                        star={star}
+                        price={price}
+                        total={total}
+                      />
+                    )
+                      }
+                        )}
+                    </div>
                    
                 </section>
             </main>
@@ -45,13 +64,13 @@ function search({searchRes}) {
 
 export default search
 
-export async function getServerProps(){
-    const searchRes = await fetch("https://jsonkeeper.com/b/5NPS")
+export async function getServerSideProps(){
+    const searchResult = await fetch("https://jsonkeeper.com/b/5NPS")
     .then(result => result.json())
 
     return {
       props:{
-        searchRes,
-      }
+        searchResult,
+      },
     }
 }
