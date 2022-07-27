@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { parseISO, format } from 'date-fns';
 import Stay from '../components/Stay';
-
+import Map from '../components/Map';
 function search({searchResult}) {
     const router=useRouter();
     const {location, startDate, endDate, numGuests}=router.query;
@@ -55,6 +55,12 @@ function search({searchResult}) {
                         )}
                     </div>
                    
+                </section>
+                <section className='hidden  xl:inline-flex  xl:min-w-[400px]'>
+                  
+                  <Map searchResults={searchResult}/>
+                  
+                  
                 </section>
             </main>
         <Footer/>
