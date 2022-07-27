@@ -24,6 +24,7 @@ function search({searchResult}) {
   return (
     <div>
         <Header thePlaceholder={`${location} | ${range} | ${numGuests} guests`}/>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet"></link>
             <main className='flex'>
                 <section className='flex-grow pt-14 px-6'>
                     <p className='text-xs h-1'>300+ stays - {range}  for {numGuests} Guests</p>
