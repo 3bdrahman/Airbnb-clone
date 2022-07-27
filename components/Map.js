@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ReactMapGL,{Marker, Popup} from 'react-map-gl'
 import { LocationMarkerIcon } from '@heroicons/react/solid'
 import {getCenter} from "geolib"
-import 'mapbox-gl/dist/mapbox-gl.css';
+
 function Map({searchResults}) {
    const [selected, setSelected]=useState({});
 
