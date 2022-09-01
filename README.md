@@ -14,3 +14,4 @@
 
 ## Resposive design:
 #### Tailwind simplified the normal media queries work of changing components styling based on screen ration. 
+![](res.gif)
