@@ -9,3 +9,4 @@
 
 ## Mapbox:
 #### I used Mapbox API to customize the map component. For example, I used Airbnb's branc color to display Streets and Highways. 
+![](Mapbox.gif)
